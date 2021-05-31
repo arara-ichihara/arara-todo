@@ -36,16 +36,47 @@ main {
     border-bottom: #404497 3px solid;
     padding-left: 20px;
 }
-main p {
+main > div p {
     margin: 0;
     color: grey;
 }
-main > content li{
+main > content li {
+    display: flex;
     color: #404497;
     padding: 0px 0 0px 20px;
     list-style: none;
     border-bottom: gray 1px solid;
 }
+main > content li p {
+    width: 80%;
+}
+main > content li button {
+    width: 70px;
+    font-size: 15px;
+    background: #c74f4f;
+    color: #fff;
+    border-radius: 5px;
+    margin: 2px 0;
+}
+
+main > content li button:hover {
+    background: #fff;
+    color: #c74f4f;
+    border: solid #c74f4f 2px;
+}
+
+main > content li p input[type=text]{
+    border: 1px solid #a0a0a0;
+    margin: 5px 0;
+}
+
+main > content li:last-child button{
+    background: #65ce85;
+}
+main > content li:last-child button:hover {
+    border: solid #65ce85 2px;
+}
+
 main > content p {
     display: inline-block;
     width: 70vh;
