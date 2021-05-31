@@ -1,12 +1,23 @@
+/* 初期化設定 */
 *{
     margin: 0;
     padding: 0;
     font-size: 25px;
 }
 header,main,footer{
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
 }
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+}
+/* 初期化設定終了 */
 
 body {
     width: 100%;
@@ -16,7 +27,7 @@ header h1 {
     color: 404497;
     font-size: 35px;
 }
-.main {
+main {
     width: 40%;
     margin: 0 auto;
 }
