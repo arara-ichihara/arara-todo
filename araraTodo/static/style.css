@@ -22,33 +22,35 @@ button{
 body {
     width: 100%;
 }
+/* ヘッダー */
 header h1 {
     text-align:center;
     color: 404497;
     font-size: 35px;
+    font-weight: 100;
+    padding: 10px 0;
 }
 main {
     width: 40%;
     margin: 0 auto;
 }
-main {
-    font-size: 25px;
+main > div {
     border-bottom: #404497 3px solid;
-    padding-left: 20px;
 }
 main > div p {
-    margin: 0;
-    color: grey;
+    color: #CBCBCB;
+    font-weight: 100;
+    padding: 5px 20px;
 }
 main > content li {
     display: flex;
     color: #404497;
-    padding: 0px 0 0px 20px;
+    padding: 5px 20px;
     list-style: none;
-    border-bottom: gray 1px solid;
+    border-bottom: #707070 1px solid;
 }
 main > content li p {
-    width: 80%;
+    width: 100%;
 }
 main > content li button {
     width: 70px;
@@ -66,8 +68,9 @@ main > content li button:hover {
 }
 
 main > content li p input[type=text]{
+    width: 90%;
     border: 1px solid #a0a0a0;
-    margin: 5px 0;
+    margin: 3px 0;
 }
 
 main > content li:last-child button{
