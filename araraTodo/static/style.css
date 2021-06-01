@@ -78,6 +78,10 @@ main > content li p input[type=text]{
 main > content li:last-child button{
     background: #65ce85;
 }
+main > content li form {
+    width: 100%;
+    display: flex;
+}
 main > content li:last-child button:hover {
     border: solid #65ce85 2px;
     background: #fff;
