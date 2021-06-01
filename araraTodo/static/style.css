@@ -1,20 +1,25 @@
 /* 初期化設定 */
-*{
+* {
     margin: 0;
     padding: 0;
     font-size: 25px;
     box-sizing: border-box;
 }
-header,main,footer{
+body {
+    width: 100%;
+    background: url("image/back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+header,main,footer {
     width: 80%;
     margin: 0 auto;
 }
-
-a{
+a {
     text-decoration: none;
 }
-
-button{
+button {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -24,15 +29,7 @@ button{
 }
 /* 初期化設定終了 */
 
-body {
-    width: 100%;
-
-    background: url("image/back.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-/* ヘッダー */
+/* ヘッダーデザイン*/
 header h1 {
     text-align:center;
     color: 404497;
@@ -40,6 +37,9 @@ header h1 {
     font-weight: 100;
     padding: 10px 0;
 }
+/* ヘッダーデザイン終了*/
+
+/* メインデザイン */
 main {
     width: 40%;
     margin: 0 auto;
@@ -52,6 +52,8 @@ main > div p {
     font-weight: 100;
     padding: 5px 20px;
 }
+
+/* リストデザイン */
 main > content li {
     display: flex;
     color: #404497;
@@ -62,9 +64,10 @@ main > content li {
 main > content li p {
     width: 100%;
 }
+
 /* ボタンの基本の形 */
 main > content li button,
-main > content li a{
+main > content li a {
     width: 70px;
     font-size: 15px;
     border-radius: 5px;
@@ -73,23 +76,23 @@ main > content li a{
     padding: 5px 0;
     color: #fff;
 }
+
 /* 削除ボタンのデザイン */
 main > content li a {
     background: #c74f4f;
     border: solid #c74f4f 2px;
 }
-
 main > content li a:hover {
     background: #fff;
     color: #c74f4f;
     border: solid #c74f4f 2px;
 }
+
 /* 追加ボタンのデザイン */
 main > content li:last-child button {
     border: solid #65ce85 2px;
     background: #65ce85;
 }
-
 main > content li:last-child button:hover {
     border: solid #65ce85 2px;
     background: #fff;
@@ -97,12 +100,11 @@ main > content li:last-child button:hover {
 }
 
 /* 追加formデザイン */
-
 main > content li form {
     width: 100%;
     display: flex;
 }
-main > content li p input[type=text]{
+main > content li p input[type=text] {
     width: 90%;
     border: 1px solid #a0a0a0;
     margin: 3px 0;
@@ -110,21 +112,25 @@ main > content li p input[type=text]{
     font-size: 23px;
 }
 
+/* コンテンツ内のテキストデザイン */
 main > content p {
     display: inline-block;
-    width: 70vh;
+    width: 70px;
 }
+/* メインデザイン終了 */
 
-footer{
+/* フッターデザイン */
+footer {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
 }
 
-footer p{
+footer p {
     color: #a0a0a0;
     font-size: 15px;
     text-align: center;
     padding: 10px 0;
 }
+/* フッターデザイン終了 */
