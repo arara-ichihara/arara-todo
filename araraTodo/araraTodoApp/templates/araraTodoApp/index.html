@@ -17,7 +17,6 @@
         <p>contents</p>
       </div>
       <content>
-        
           <ul>
             {% if todo_list %}
               {% for todo in todo_list %}
@@ -30,13 +29,13 @@
               <li>
                 <p>No item is available.</p>
               </li>
-              <li>
-                <form action="/addTodo/" method="post">{% csrf_token%}
-                    <p><input type="text" name="content"></p>
-                    <button type="submit">追加</button>
-                </form>                
-              </li>
             {% endif %}
+            <li>
+              <form action="/addTodo/" method="post">{% csrf_token%}
+                  <p><input type="text" name="content"></p>
+                  <button type="submit">追加</button>
+              </form>                
+            </li>
           </ul>
     </content>
     </main>
