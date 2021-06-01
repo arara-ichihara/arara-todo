@@ -9,13 +9,17 @@
     <!-- ヘッダー -->
     <header>
         <h1>Arara-ToDo</h1>
+        <form action="/addTodo/" method="post">{% csrf_token%}
+            <p><input type="text" name="content" placeholder="テキストを入力してください"></p>
+            <button type="submit">
+                <img src="{% static 'image/add_icon1.png' %}" alt="追加">
+                <img src="{% static 'image/add_icon2.png' %}" alt="追加">
+            </button>
+        </form>                
     </header>
     <!-- ヘッダー終了 -->
     <!-- メイン -->
     <main>
-      <div>
-        <p>contents</p>
-      </div>
       <content>
           <ul>
             {% if todo_list %}
@@ -39,15 +43,6 @@
                 <p>No item is available.</p>
               </li>
             {% endif %}
-            <li>
-              <form action="/addTodo/" method="post">{% csrf_token%}
-                  <p><input type="text" name="content"></p>
-                  <button type="submit">
-                      <img src="{% static 'image/add_icon1.png' %}" alt="追加">
-                      <img src="{% static 'image/add_icon2.png' %}" alt="追加">
-                  </button>
-              </form>                
-            </li>
           </ul>
     </content>
     </main>
