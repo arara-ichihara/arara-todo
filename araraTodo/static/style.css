@@ -1,15 +1,26 @@
 /* 初期化設定 */
-*{
+* {
     margin: 0;
     padding: 0;
     font-size: 25px;
+    box-sizing: border-box;
 }
-header,main,footer{
+body {
+    width: 100%;
+    background: url("image/back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-width: 1000px;
+}
+header,main,footer {
     width: 80%;
     margin: 0 auto;
 }
-
-button{
+a {
+    text-decoration: none;
+}
+button {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -19,10 +30,7 @@ button{
 }
 /* 初期化設定終了 */
 
-body {
-    width: 100%;
-}
-/* ヘッダー */
+/* ヘッダーデザイン*/
 header h1 {
     text-align:center;
     color: 404497;
@@ -30,8 +38,11 @@ header h1 {
     font-weight: 100;
     padding: 10px 0;
 }
+/* ヘッダーデザイン終了*/
+
+/* メインデザイン */
 main {
-    width: 40%;
+    width: 70%;
     margin: 0 auto;
 }
 main > div {
@@ -42,45 +53,64 @@ main > div p {
     font-weight: 100;
     padding: 5px 20px;
 }
+
+/* リストデザイン */
 main > content li {
     display: flex;
+    align-items: flex-start;
     color: #404497;
     padding: 5px 20px;
     list-style: none;
     border-bottom: #707070 1px solid;
+    justify-content:space-between;
+}
+main > content li div{
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
 }
 main > content li p {
-    width: 100%;
-}
-main > content li button {
-    width: 70px;
-    font-size: 15px;
-    background: #c74f4f;
-    color: #fff;
-    border-radius: 5px;
-    margin: 2px 0;
+    overflow-wrap: break-word;
 }
 
-main > content li button:hover {
+/* ボタンの基本の形 */
+main > content li button,
+main > content li a {
+    width: 70px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin: 2px;
+    text-align: center;
+    padding: 5px 0;
+    color: #fff;
+}
+
+/* 編集ボタン */
+main > content li a:first-child {
+    background: #a0a0a0;
+    border: solid #a0a0a0 2px;
+}
+main > content li a:first-child:hover {
+    background: #fff;
+    color: #a0a0a0;
+    border: solid #a0a0a0 2px;
+}
+
+/* 削除ボタンのデザイン */
+main > content li a {
+    background: #c74f4f;
+    border: solid #c74f4f 2px;
+}
+main > content li a:hover {
     background: #fff;
     color: #c74f4f;
     border: solid #c74f4f 2px;
 }
 
-main > content li p input[type=text]{
-    width: 90%;
-    border: 1px solid #a0a0a0;
-    margin: 3px 0;
-    padding: 2px 10px;
-    font-size: 23px;
-}
-
-main > content li:last-child button{
+/* 追加ボタンのデザイン */
+main > content li:last-child button {
+    border: solid #65ce85 2px;
     background: #65ce85;
-}
-main > content li form {
-    width: 100%;
-    display: flex;
 }
 main > content li:last-child button:hover {
     border: solid #65ce85 2px;
@@ -88,21 +118,39 @@ main > content li:last-child button:hover {
     color: #65ce85;
 }
 
-main > content p {
-    display: inline-block;
-    width: 70vh;
+/* 追加formデザイン */
+main > content li form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+main > content li p input[type=text] {
+    width: 90%;
+    border: 1px solid #a0a0a0;
+    margin: 3px 0;
+    padding: 2px 10px;
+    font-size: 23px;
 }
 
-footer{
+/* コンテンツ内のテキストデザイン */
+main > content p {
+    display: inline-block;
+    width: 70%;
+}
+/* メインデザイン終了 */
+
+/* フッターデザイン */
+footer {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
 }
 
-footer p{
+footer p {
     color: #a0a0a0;
     font-size: 15px;
     text-align: center;
     padding: 10px 0;
 }
+/* フッターデザイン終了 */
