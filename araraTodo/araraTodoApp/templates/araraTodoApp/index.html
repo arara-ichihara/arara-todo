@@ -17,26 +17,27 @@
         <p>contents</p>
       </div>
       <content>
-        {% if todo_list %}
+        
           <ul>
-            {% for todo in todo_list %}
+            {% if todo_list %}
+              {% for todo in todo_list %}
+                <li>
+                  <p>{{ todo.content }}</p>
+                  <a href="{% url 'delete' todo.id %}"><button>削除</button></a>
+                </li>
+              {% endfor%}
+            {% else %}
               <li>
-                <p>{{ todo.content }}</p>
-                <a href="{% url 'delete' todo.id %}"><button>削除</button></a>
+                <p>No item is available.</p>
               </li>
-            {% endfor%}
-            <li>
-              <p><input type="text"></p>
-              <button>追加</button>
-            </li>
+              <li>
+                <form action="/addTodo/" method="post">{% csrf_token%}
+                    <p><input type="text" name="content"></p>
+                    <button type="submit">追加</button>
+                </form>                
+              </li>
+            {% endif %}
           </ul>
-        {% else %}
-          <p>No item is available.</p>
-          <li>
-            <p><input type="text"></p>
-            <button>追加</button>
-          </li>
-        {% endif %}
     </content>
     </main>
     <!-- メイン終了 -->
