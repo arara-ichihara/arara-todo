@@ -22,7 +22,7 @@
               {% for todo in todo_list %}
                 <li>
                   <p>{{ todo.content }}</p>
-                  <a href="{% url 'delete' todo.id %}"><button>削除</button></a>
+                  <a href="{% url 'delete' todo.id %}">削除</a>
                 </li>
               {% endfor%}
             {% else %}
