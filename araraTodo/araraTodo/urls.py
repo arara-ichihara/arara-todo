@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from araraTodoApp.views import addTodo
 
 urlpatterns = [
     path('araraTodoApp/', include('araraTodoApp.urls')),
     path('admin/', admin.site.urls),
+    path('addTodo/', addTodo),
 ]
