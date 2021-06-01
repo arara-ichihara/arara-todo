@@ -15,18 +15,15 @@
     <main class='main-title'>
       <p>contents</p>
       <div class="main-contents">
-        <li>
-            <p>todo1</p>
-            <button>削除</button>
-        </li>
-        <li>
-            <p>todo2</p>
-            <button>削除</button>
-        </li>
-        <li>
-            <p>todo3</p>
-            <button>削除</button>
-        </li>
+        {% if todo_list %}
+          <ul>
+          {% for todo in todo_list %}
+              <li>{{ todo.content }}</li>
+          {% endfor %}
+          </ul>
+        {% else %}
+          <p>No todo is available.</p>
+        {% endif %}
       </div>
       <p>ちゃんタマでーす</p>
     </main>
