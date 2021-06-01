@@ -4,7 +4,9 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from .models import TodoItem
+
 from django.utils import timezone
+from django.shortcuts import render, redirect, get_object_or_404
 
 def index(request):
     todo_list = TodoItem.objects.all()
@@ -16,3 +18,7 @@ def addTodo(request):
     new_todo_item = TodoItem(content=new, create_date=timezone.now())
     new_todo_item.save()
     return HttpResponseRedirect('/araraTodoApp/')
+def delete(request, id):
+    todo = get_object_or_404(TodoItem,id=id)
+    todo.delete()
+    return redirect('/araraTodoApp')
