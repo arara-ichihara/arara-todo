@@ -77,7 +77,7 @@ main {
 }
 
 /* リストデザイン */
-main > content li {
+main li {
     display: flex;
     align-items: flex-start;
     color: #404497;
@@ -86,24 +86,24 @@ main > content li {
     border-bottom: #707070 1px solid;
     justify-content:space-between;
 }
-main > content li:last-child {
+main li:last-child {
     border: none;
 }
-main > content li div{
+main li div{
     display: flex;
     justify-content: flex-end;
     width: 30%;
 }
-main > content li p {
+main li p {
     overflow-wrap: break-word;
     display: inline-block;
-    width: 80%;
+    width: 60%;
 }
 
 /* ボタンの基本の形 */
 button,
-li a {
-    width: 70px;
+main li a {
+    width: 50px;
     height: 40px;
     font-size: 15px;
     border-radius: 5px;
@@ -119,42 +119,51 @@ li a {
 }
 
 /* 編集ボタン */
-li a:first-child {
+main li form{
+    display: flex;
+    justify-content: space-evenly;
+}
+main li form input{
+    width: 200px;
+    margin: 2px 0;
+    padding: 0 10px;
+}
+main li button {
     background: #a0a0a0;
     border: solid #a0a0a0 2px;
 }
-li a:first-child:hover {
+main li button:hover {
     background: #fff;
     color: #a0a0a0;
     border: solid #a0a0a0 2px;
 }
 
 /* 削除ボタンのデザイン */
-li a {
+main li a {
     background: #c74f4f;
     border: solid #c74f4f 2px;
 }
-li a:hover {
+main li a:hover {
     background: #fff;
     color: #c74f4f;
     border: solid #c74f4f 2px;
 }
 
 /* 追加ボタンのデザイン */
-button {
+header button {
     border: solid #65ce85 2px;
     background: #65ce85;
     border-radius: 0 5px 5px 0;
     margin: 2px 2px 2px 0;
 }
-button:hover {
+header button:hover {
     border: solid #65ce85 2px;
     background: #fff;
     color: #65ce85;
 }
 
 /* hover時の画像のon off */
-li a img,
+main li a img,
 button img  {
 	position: absolute;
 	top: 50%;
@@ -163,7 +172,7 @@ button img  {
 	width: 40%;
 	display: block;
 }
-li a:hover img:nth-of-type(2),
+main li a:hover img:nth-of-type(2),
 button:hover img:nth-of-type(2) {
 	opacity: 0;
 }
