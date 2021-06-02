@@ -9,13 +9,17 @@
     <!-- ヘッダー -->
     <header>
         <h1>Arara-ToDo</h1>
+        <form action="/addTodo/" method="post">{% csrf_token%}
+            <p><input type="text" name="content" placeholder="テキストを入力してください"></p>
+            <button type="submit">
+                <img src="{% static 'image/add_icon1.png' %}" alt="追加">
+                <img src="{% static 'image/add_icon2.png' %}" alt="追加">
+            </button>
+        </form>                
     </header>
     <!-- ヘッダー終了 -->
     <!-- メイン -->
     <main>
-      <div>
-        <p>contents</p>
-      </div>
       <content>
           <ul>
             {% if todo_list %}
@@ -23,8 +27,14 @@
                 <li>
                   <p>{{ todo.content }}</p>
                   <div>
-                    <a href="">編集</a>
-                    <a href="{% url 'delete' todo.id %}">削除</a>
+                    <a href="">
+                      <img src="{% static 'image/update_icon1.png' %}" alt="編集">
+                      <img src="{% static 'image/update_icon2.png' %}" alt="編集">
+                    </a>
+                    <a href="{% url 'delete' todo.id %}">
+                      <img src="{% static 'image/delete_icon1.png' %}" alt="削除">
+                      <img src="{% static 'image/delete_icon2.png' %}" alt="削除">
+                    </a>
                   </div>
                 </li>
               {% endfor%}
@@ -33,12 +43,6 @@
                 <p>No item is available.</p>
               </li>
             {% endif %}
-            <li>
-              <form action="/addTodo/" method="post">{% csrf_token%}
-                  <p><input type="text" name="content"></p>
-                  <button type="submit">追加</button>
-              </form>                
-            </li>
           </ul>
     </content>
     </main>
