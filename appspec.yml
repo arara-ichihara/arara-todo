@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: / # 変更するファイルを指定
+  - source: / # 変更するファイルを指定する
     #destination: /var/www/html/
     destination: /home/ec2-user/arara-todo/
     #プロジェクトのあるpathを指定
