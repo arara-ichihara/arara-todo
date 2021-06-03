@@ -1,9 +1,10 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source: / # 変更するファイルを指定
     #destination: /var/www/html/
-    destination: /home/ec2-user/arara-todo/
+    destination: /home/ec2-user/
+    #プロジェクトのあるpathを指定
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
