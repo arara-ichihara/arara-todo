@@ -26,9 +26,9 @@ SECRET_KEY = 'django-insecure-za%yzq=w=#nboqxn*vljb*#k8x+oa_snyialn9tt0^*+%7v3sr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#ALLOWED_HOSTS = ['ec2-3-112-26-12.ap-northeast-1.compute.amazonaws.com']
+ALLOWED_HOSTS = ['ec2-3-112-26-12.ap-northeast-1.compute.amazonaws.com']
 #ec2でgit clone後に上の行のコメントアウトを外し、下の行を削除
-ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -128,8 +128,8 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_URL = '/static/'
 
-#STATIC_ROOT = os.path.join(BASE_DIR,'static') 
+STATIC_ROOT = os.path.join(BASE_DIR,'static') 
 #ec2でgit clone後に上の行のコメントアウトを外し、下の行を削除
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
