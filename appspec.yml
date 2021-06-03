@@ -3,7 +3,7 @@ os: linux
 files:
   - source: / # 変更するファイルを指定
     #destination: /var/www/html/
-    destination: /home/ec2-user/
+    destination: /home/ec2-user/arara-todo/
     #プロジェクトのあるpathを指定
 hooks:
   BeforeInstall:
