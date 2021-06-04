@@ -102,8 +102,7 @@ main li p {
 
 /* ボタンの基本の形 */
 button,
-main li a,
-label{
+main li a {
     width: 50px;
     height: 40px;
     font-size: 15px;
@@ -112,39 +111,35 @@ label{
     text-align: center;
     padding: 5px 0;
     color: #fff;
+
     position: relative;
 	display: block;
 	overflow: hidden;
 	cursor: pointer;
 }
+
 /* 編集ボタン */
-main li input{
-    width: 60%;
+main li form{
+    display: flex;
+    justify-content: space-evenly;
+}
+main li form input{
+    width: 200px;
     margin: 2px 0;
     padding: 0 10px;
 }
-main li label {
+main li button {
     background: #a0a0a0;
     border: solid #a0a0a0 2px;
 }
-main li label:hover {
+main li button:hover {
     background: #fff;
     color: #a0a0a0;
     border: solid #a0a0a0 2px;
 }
-main li label input{
-    display: none;
-}
-/* 編集テキストボックス */
-main li input[type="text"],
-input[type="checkbox"]{
-    display: none;
-}
-input[type="checkbox"]:checked + input{
-    display: block;
-}
+
 /* 削除ボタンのデザイン */
-main li a{
+main li a {
     background: #c74f4f;
     border: solid #c74f4f 2px;
 }
@@ -153,6 +148,7 @@ main li a:hover {
     color: #c74f4f;
     border: solid #c74f4f 2px;
 }
+
 /* 追加ボタンのデザイン */
 header button {
     border: solid #65ce85 2px;
@@ -165,19 +161,19 @@ header button:hover {
     background: #fff;
     color: #65ce85;
 }
+
 /* hover時の画像のon off */
 main li a img,
-button img ,
-label img{
+button img  {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	width: 40%;
 	display: block;
 }
 main li a:hover img:nth-of-type(2),
-button:hover img:nth-of-type(2),
-label:hover img:nth-of-type(2){
+button:hover img:nth-of-type(2) {
 	opacity: 0;
 }
 
