@@ -28,10 +28,14 @@
                 <li>
                   <p>{{ todo.content }}</p>
                   <div>
-                    <a href="">
-                      <img src="{% static 'image/update_icon1.png' %}" alt="編集">
-                      <img src="{% static 'image/update_icon2.png' %}" alt="編集">
-                    </a>
+                    <form action="{% url 'update' todo.id %}" method="post">{% csrf_token%}
+                      <input type="text" name="content_up" placeholder="{{ todo.content }}">
+                      <button>
+                        <img src="{% static 'image/update_icon1.png' %}" alt="編集">
+                        <img src="{% static 'image/update_icon2.png' %}" alt="編集">
+                      </button>
+                    </form>
+                    
                     <a href="{% url 'delete' todo.id %}">
                       <img src="{% static 'image/delete_icon1.png' %}" alt="削除">
                       <img src="{% static 'image/delete_icon2.png' %}" alt="削除">
