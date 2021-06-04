@@ -27,8 +27,8 @@
                 <li>
                   <p>{{ todo.content }}</p>
                   <div>
-                    <form>
-                      <input type="text" placeholder="{{ todo.content }}">
+                    <form action="{% url 'update' todo.id %}" method="post">{% csrf_token%}
+                      <input type="text" name="content_up" placeholder="{{ todo.content }}">
                       <button>
                         <img src="{% static 'image/update_icon1.png' %}" alt="編集">
                         <img src="{% static 'image/update_icon2.png' %}" alt="編集">
