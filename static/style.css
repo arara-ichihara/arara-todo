@@ -101,6 +101,7 @@ main li p {
 }
 
 /* ボタンの基本の形 */
+label,
 button,
 main li a {
     width: 50px;
@@ -128,14 +129,23 @@ main li form input{
     margin: 2px 0;
     padding: 0 10px;
 }
-main li button {
+main li label {
     background: #a0a0a0;
     border: solid #a0a0a0 2px;
 }
-main li button:hover {
+main li label:hover {
     background: #fff;
     color: #a0a0a0;
     border: solid #a0a0a0 2px;
+}
+
+/* 編集テキストボックス */
+main li input[type="text"],
+input[type="checkbox"]{
+    display: none;
+}
+input[type="checkbox"]:checked + input{
+    display: block;
 }
 
 /* 削除ボタンのデザイン */
@@ -164,7 +174,8 @@ header button:hover {
 
 /* hover時の画像のon off */
 main li a img,
-button img  {
+button img  ,
+label img{
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -173,7 +184,8 @@ button img  {
 	display: block;
 }
 main li a:hover img:nth-of-type(2),
-button:hover img:nth-of-type(2) {
+button:hover img:nth-of-type(2) ,
+label:hover img:nth-of-type(2){
 	opacity: 0;
 }
 
