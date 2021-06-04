@@ -22,3 +22,10 @@ def delete(request, id):
     todo = get_object_or_404(TodoItem,id=id)
     todo.delete()
     return redirect('/araraTodoApp')
+def update(request, id):
+    todo = get_object_or_404(TodoItem,id=id)
+    if content := request.POST["content_up"]:
+        todo.content = content
+    todo.full_clean()
+    todo.save()
+    return redirect('/araraTodoApp')

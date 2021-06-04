@@ -1,0 +1,6 @@
+#!/bin/bash
+sudo systemctl start gunicorn.service
+sudo systemctl restart nginx
+systemctl status nginx.service
+sudo tail -30 /var/log/nginx/error.log
+
