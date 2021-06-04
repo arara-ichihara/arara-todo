@@ -1,5 +1,3 @@
 #!/bin/bash
-sudo systemctl start gunicorn.service
-sudo systemctl restart nginx
-systemctl status nginx.service
+#yum install -y httpd
 
